@@ -14,7 +14,11 @@ We created two visualizations to analyse our data:
 
 (1) An area chart that shows the count of total players (grey) compared to the retained players (green) over the days they initially joined. In this chart view, there appear to be a few noticeable peaks in the retained player count (e.g. day 55, 277) and a significant drop at day 127. However, these data points are quite dependent on the total player count for the day, and as we can see from the retained player trendline, overall the retention rate was quite consistent throughout the year (average of 71%).
 
+![Player Retention (Count) vs. Day Joined Chart](Player-Retention-Count-vs.-Day-Joined.png)
+
 (2) A 100% stacked area chart that shows the average player retention percentage over days joined. This view clearly depicts the consistency of the retention percentage over time.
+
+![Player Retention Percentage vs. Day Joined Chart](Player-Retention-Percentage-vs.-Day-Joined.png)
 
 Note: As our retention rate criteria is based on knowing if a player played a game 30 days after their join date, we omitted data for players who joined between day 335 and 365, as these players had no opportunity to meet the criteria. We also noted that the players who joined closer to day 335 had less opportunity to meet the retention criteria, which should be considered upon chart review.
 
@@ -25,6 +29,9 @@ We have once again joined the matches_info and player_info tables on player_id t
 
 ### Visualization:
 Age has a major impact on the 30 day retention rate. We have created a column chart to find out that the players close to 20 years of age have the highest player count but the lowest retention rate. Marketing advice would be to investigate further on how to increase the retention rate for the players around the age of 20. The Game Company should also look into optimizing the features and difficulty level of the game in order to retain more of the players that are around the age group of (17-23) Looking at the data there is a huge market potential for the players in their early teens as about 100% of the players that have joined the game are being retained. Also, the game company should focus their efforts towards increasing the number of players in their early thirties to join because these players have more spending power and higher retention rate.
+
+![Age vs. Player Retention Count Chart](Age-vs.-Player-Retention-Count.png)
+![Age vs. Retention Rate Chart](Age-vs.-Retention-Rate.png)
 
 
 ## Q3: For the players who played at least one match, did a player’s rate of winning (win percentage) affect their rolling 30-day retention rate?
@@ -47,7 +54,11 @@ When we compared the average win percentage for the retained players vs. non ret
 
 (1) A clustered column chart comparing total retained players and total not retained players by win percent bucket, showing that the most retained players (by count) had win percentages between 50-59.99%.
 
+![Win Average % bucketed vs. Player Count Chart](Win-Average-%-bucketed-vs.-Player-Count.png)
+
 (2) A column chart that shows average player retention rate by win percentile. This visualization was of particular interest, as the first and tenth percentiles (the lowest and highest win percentages, respectively) had significantly lower retention than the other percentiles: across the 10 percentiles, the average retention rate was 71.16% (approx. 2886 players retained of a total 4055 per grouping) -- while the first percentile showed a rate of 58.58%, and the tenth percentile showed a rate of 59.31%. This insight could indicate that the two biggest deterrents for retention were being heavily under or overskilled, though it is worth noting that the total number of matches per player hasn’t been factored into this analysis -- we are including any player that played one or more matches. We recommend experimenting with dynamic difficulty adjustment (DDA) to automatically modify the game's features, behaviors, and scenarios in real-time, depending on the player's skill.
+
+![Win Percentile vs. Retained Player Retention Rate Chart](Win-Percentile-vs.-Retained-Player-Retention-Rate.png)
 
 Link to data and visualizations:
 https://docs.google.com/spreadsheets/d/1tLqhKBL2LvLfDe-YP6LOFE2ouZsBOzfOdfH_KwNvEHI/edit?usp=sharing
